@@ -582,8 +582,8 @@ MonoBehaviour:
         transform: {fileID: 0}
         weight: 0
     m_Offset: {x: 0, y: 0, z: 0}
-    m_MinLimit: -180
-    m_MaxLimit: 180
+    m_MinLimit: -60
+    m_MaxLimit: 60
     m_AimAxis: 4
     m_MaintainOffset: 0
     m_ConstrainedAxes:
@@ -734,7 +734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1420b8e9c576e9f4aaed10d4ac277ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yPos: -1.5
+  yPos: -1
 --- !u!4 &1109469627 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3554524852209686374, guid: ee576f88ec1b13a42bac74d5516262c0,
@@ -1128,7 +1128,6 @@ MonoBehaviour:
   xInvert: 1
   yInvert: -1
   angleOffset: -135
-  moveInput: {x: 0, y: 0}
 --- !u!4 &2519558056506128494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2701594392305464202, guid: ee576f88ec1b13a42bac74d5516262c0,
