@@ -477,3 +477,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee576f88ec1b13a42bac74d5516262c0, type: 3}
+--- !u!1 &2519558056506128488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3329898889963481392, guid: ee576f88ec1b13a42bac74d5516262c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2519558056506128487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2519558056506128489 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2519558057465255023, guid: ee576f88ec1b13a42bac74d5516262c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2519558056506128487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2519558056506128490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519558056506128488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec31e29667cd41409a9b9080c9cf1bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2.2
+  sprintSpeed: 4.4
+  rotationSmoothTime: 0
+  animator: {fileID: 2519558056506128489}
+  controller: {fileID: 2519558056506128491}
+--- !u!143 &2519558056506128491
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519558056506128488}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.8
+  m_Radius: 0.2
+  m_SlopeLimit: 45
+  m_StepOffset: 0
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &2519558056506128493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519558056506128488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81600ce507ca3443b18bf193d94a485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xInvert: 1
+  yInvert: -1
+  angleOffset: -135
