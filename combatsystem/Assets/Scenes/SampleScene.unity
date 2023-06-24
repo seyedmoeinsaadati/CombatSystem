@@ -1012,12 +1012,7 @@ PrefabInstance:
     - target: {fileID: 2519558057465255023, guid: ee576f88ec1b13a42bac74d5516262c0,
         type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig1:Hips'\n\tTransform 'mixamorig1:Neck'\n\tTransform
-        'mixamorig1:Head'\n\tTransform 'mixamorig1:Spine'\n\tTransform 'mixamorig1:Hips'\n\tTransform
-        'mixamorig1:Neck'\n\tTransform 'mixamorig1:Head'\n\tTransform 'mixamorig1:Spine'\n\tTransform
-        'mixamorig1:Hips'\n\tTransform 'mixamorig1:Neck'\n\tand more ..."
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2701594392305464202, guid: ee576f88ec1b13a42bac74d5516262c0,
         type: 3}
@@ -1105,11 +1100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec31e29667cd41409a9b9080c9cf1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2.2
-  sprintSpeed: 4.4
+  moveSpeed: 4.4
+  aimingSpeed: 2.2
   rotationSmoothTime: 0
   animator: {fileID: 2519558056506128489}
   controller: {fileID: 2519558056506128491}
+  aimingTarget: {fileID: 980655119}
+  aimingRig: {fileID: 520819405}
 --- !u!143 &2519558056506128491
 CharacterController:
   m_ObjectHideFlags: 0

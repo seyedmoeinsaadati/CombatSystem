@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharacterMovementController : Controller<CharacterMovement>
 {
@@ -8,6 +6,7 @@ public class CharacterMovementController : Controller<CharacterMovement>
     [SerializeField] private int yInvert = 0;
     [SerializeField] private float angleOffset = 0;
     Vector2 moveInput;
+    
 
     public override void Control()
     {
