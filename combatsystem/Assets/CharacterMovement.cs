@@ -66,7 +66,8 @@ public class CharacterMovement : MonoBehaviour
 
             _verticalVelocity = direction.magnitude;
 
-            AimingMovement(_animationBlend, 0);
+            inputDirection = inputDirection.RotateXZ(135 * Mathf.Deg2Rad, true);
+            AimingMovement(inputDirection.z, inputDirection.x);
 
             if (targetSpeed > 0)
                 transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
@@ -110,7 +111,6 @@ public class CharacterMovement : MonoBehaviour
     }
 
     #endregion
-
 
     #region Movement Input
 
