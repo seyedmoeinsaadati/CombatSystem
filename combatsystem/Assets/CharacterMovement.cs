@@ -21,8 +21,9 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private Transform aimingTarget;
     [SerializeField] private Rig aimingRig;
 
-    private const string ForwardBlendKey = "forward";
-    private const string RightBlendKey = "right";
+    private const string AnimatorMoveXKey = "MoveX";
+    private const string AnimatorMoveZKey = "MoveZ";
+    private const string AnimatorMoveSpeedKey = "MoveSpeed";
     private const string Aiming_Bool_Key = "aiming";
 
     private float targetSpeed;
@@ -42,8 +43,8 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
-        // Move();
-        ThirdPersonMove();
+        Move();
+        // ThirdPersonMove();
     }
 
     private void ThirdPersonMove()
@@ -117,13 +118,13 @@ public class CharacterMovement : MonoBehaviour
 
     private void AimingMovement(float forward, float right)
     {
-        animator.SetFloat(ForwardBlendKey, forward);
-        animator.SetFloat(RightBlendKey, right);
+        animator.SetFloat(AnimatorMoveXKey, right);
+        animator.SetFloat(AnimatorMoveZKey, forward);
     }
 
     private void Movement(float forward)
     {
-        animator.SetFloat(ForwardBlendKey, forward);
+        animator.SetFloat(AnimatorMoveSpeedKey, forward);
     }
 
     #endregion
