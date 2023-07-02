@@ -15,6 +15,7 @@ public class CharacterMovement : MonoBehaviour
     [Range(0.0f, 0.3f)]
     public float rotationSmoothTime = 0.12f;
 
+    [SerializeField] private Transform cameraTransform;
     [SerializeField] private Animator animator;
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform aimingTarget;
@@ -30,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
     private float _rotationVelocity;
     [SerializeField] private float _verticalVelocity;
 
-    private Vector2 move;
+    private Vector2 moveInput;
     private bool aiming;
 
     private void Reset()
@@ -41,15 +42,30 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
-        Move();
+        // Move();
+        ThirdPersonMove();
     }
+
+    private void ThirdPersonMove()
+    {
+        Vector3 move = new Vector3(moveInput.y, 0.0f, moveInput.x);
+        // move = move.x * cameraTransform.right.normalized + move.z * cameraTransform.forward.normalized;
+        // move.y = 0;
+        controller.Move(move * (Time.deltaTime * aimingSpeed));
+
+        SetActiveAiming(true);
+
+        AimingMovement(moveInput.x, moveInput.y);
+
+    }
+
 
     private void Move()
     {
-        Vector3 inputDirection = new Vector3(move.x, 0.0f, move.y).normalized;
+        Vector3 inputDirection = new Vector3(moveInput.x, 0.0f, moveInput.y).normalized;
         _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg;
         targetSpeed = aiming ? aimingSpeed : moveSpeed;
-        if (move == Vector2.zero) targetSpeed = 0.0f;
+        if (moveInput == Vector2.zero) targetSpeed = 0.0f;
 
         if (aiming)
         {
@@ -79,7 +95,7 @@ public class CharacterMovement : MonoBehaviour
             if (_animationBlend < 0.01f) _animationBlend = 0f;
             Movement(_animationBlend);
 
-            if (move != Vector2.zero)
+            if (moveInput != Vector2.zero)
             {
                 float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, rotationSmoothTime);
                 transform.rotation = Quaternion.Euler(0.0f, _targetRotation, 0.0f);
@@ -116,7 +132,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void Move(Vector2 input)
     {
-        move = input;
+        moveInput = input;
     }
 
     public void Sprint(bool aimingState)

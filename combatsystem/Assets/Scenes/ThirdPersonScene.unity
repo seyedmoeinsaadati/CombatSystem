@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b342d8ce5c2fd48b8fa3147d48d1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 1
+  m_Weight: 0
   m_Effectors: []
 --- !u!4 &536767069 stripped
 Transform:
@@ -725,7 +725,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 30
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 3
   m_Depth: -1
   m_CullingMask:
@@ -749,8 +749,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.09904577, y: -0.89239913, z: 0.23911765, w: 0.3696438}
-  m_LocalPosition: {x: 8, y: 7.5, z: 8}
+  m_LocalRotation: {x: 0.10629536, y: 0.008055836, z: -0.00086104125, w: 0.9943016}
+  m_LocalPosition: {x: 0.25082222, y: 1.9042244, z: -1.2335439}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1103,7 +1103,7 @@ MonoBehaviour:
   moveSpeed: 4.4
   aimingSpeed: 2.2
   rotationSmoothTime: 0
-  cameraTransform: {fileID: 0}
+  cameraTransform: {fileID: 963194228}
   animator: {fileID: 2519558056506128489}
   controller: {fileID: 2519558056506128491}
   aimingTarget: {fileID: 980655119}
@@ -1216,8 +1216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xInvert: 1
-  yInvert: -1
-  angleOffset: -135
+  yInvert: 1
+  angleOffset: 0
 --- !u!4 &2519558056506128494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2701594392305464202, guid: ee576f88ec1b13a42bac74d5516262c0,

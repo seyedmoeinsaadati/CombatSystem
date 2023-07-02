@@ -222,7 +222,7 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 460, y: 170, z: 0}
   m_ExitPosition: {x: 460, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -8180343661828004885}
+  m_DefaultState: {fileID: -7610618629137457417}
 --- !u!206 &3703090624784311612
 BlendTree:
   m_ObjectHideFlags: 1
